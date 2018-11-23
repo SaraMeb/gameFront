@@ -1,0 +1,69 @@
+@baseColor: black;
+@accentColor: lightgrey;
+@textsize: 10px;
+@titlesize: 20px;
+
+.accent{
+  background-color: @accentColor;
+  border: 1px solid @baseColor;
+}
+.no-padding-margin{
+  margin: 0;
+  padding: 0;
+}
+body{
+.no-padding-margin();
+  //.accent();
+  /*background-color: @baseColor;*/
+}
+.choice-container{
+  .base-flex();
+  height: 50%;
+  img{
+    height: 100px;
+    &:hover{
+      cursor: pointer;
+      background-color: yellow;
+    }
+  }
+}
+.base-flex{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.form-container {
+  border: 1px solid @baseColor;
+  height: 25vh;
+  .base-flex();
+  input{
+    width: 200px;
+    .no-padding-margin();
+    &[type="submit"]{//pour dire element parent qui a cet element:
+      .no-padding-margin();
+    }
+  }
+  /*input[type="text"]{
+  border: 1px solid blue;
+  width: 200px;
+  }
+  input[type="submit"]{
+  border: 1px solid blue;
+  width: 200px;
+  }*/
+}
+/*.form-container .input[type="text"]{
+}
+.form-container .input[type="submit"]{
+}*/
+.game-container {
+  .base-flex();
+  flex-direction: column;
+  border: 1px solid @baseColor;
+  height: 50vh;
+  text-align: center;
+}
+.player-history-container{
+  border: 1px solid @baseColor;
+  height: 25vh;
+}
